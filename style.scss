@@ -1,0 +1,1354 @@
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Do Hyeon', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+  
+}
+
+body{
+    background-color: #191919;
+    
+}
+
+$pricol:#D08702;
+
+
+
+
+/*--Header Section---*/
+#header{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(25,25,25,0.3),rgba(25,25,25,0.9)),url(images/headerbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    nav{
+
+        
+        .navbar-toggler{
+            background: $pricol;
+        }
+      
+
+        .navbar-brand{
+            color: $pricol;
+            font-size: 2rem;
+
+        }
+
+        .navbar-nav{
+
+
+            .nav-item{
+                margin: 0 0.4rem;
+
+                .nav-link{
+                    color: whitesmoke;
+                    text-transform: uppercase;
+                    border-radius: 0.4rem;
+                    position: relative;
+                    z-index: 1;
+                    
+
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        background: $pricol;
+                        width: 100%;
+                        height: 0%;
+                        display: inline-block;
+                        top: 0;
+                        left: 0;
+                        transition: 0.7s;
+                        z-index: -1;
+                    }
+
+                    &:hover::before{
+                     
+                        height: 100%;
+                        
+                    }
+                   
+
+                }
+            }
+        }
+    }
+
+    .header-content{
+        padding: 1.8rem 0 4rem 0;
+      
+  
+
+
+        .img-container{
+            width: 13rem;
+            height: 13rem;
+            border: 0.28rem solid $pricol;
+            border-radius: 50%;
+            background: $pricol;
+            overflow: hidden;
+            transition: 0.4s;
+
+            &:hover{
+                box-shadow: 0 4px 12px $pricol;
+                cursor: pointer; 
+            }
+
+        }
+
+        h2{
+            margin: 1.8rem 0 0.4rem 0;
+            font-weight: bold;
+            span{
+                color: $pricol;
+                font-weight: bold;
+            }
+        }
+        p{
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 1.2rem 0;
+        }
+
+        .button-container{
+            margin: 1.5rem 0;
+           
+
+            a{
+                display: inline-block;
+                padding: 0.6rem 1.2rem;
+                text-decoration: none;
+                color: white;
+                background: $pricol;
+                text-transform: uppercase;
+                border-radius: 0.2rem;
+                transition: all 0.4s;
+                position: relative;
+                z-index: 1;
+                
+
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: white;
+                    width: 100%;
+                    height: 0%;
+                    transition: 0.4s;
+                    z-index: -1;
+                }
+
+                &:hover::before{
+                    height: 100%;
+
+                }
+                &:hover{
+                    color: $pricol;
+                }
+
+                &:hover i{
+                    color: $pricol;
+                }
+
+                i{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+/*---About Section---*/
+#about{
+
+    padding: 5rem 0rem;
+   
+    
+
+    .about-heading{
+
+        h2{
+
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            position: relative;
+            display: inline-block;
+
+            &::before{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                top: 100%;
+                left: 0;
+                background: $pricol;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                margin-top: 1.2rem; 
+                animation: move 3s infinite linear;
+                animation-direction: alternate-reverse;
+            }
+
+            @keyframes move {
+                0%{
+                    left: 0;
+                }
+
+                100%{
+                    left: 100%;
+                }
+                
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                margin-top: 1.4rem; 
+                left: 0;
+                top: 100%;
+                background: $pricol;
+                display: inline-block;
+   
+            }
+
+
+
+            span{
+                background: $pricol;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    }
+
+    .img-holder{
+        padding: 1rem;
+        background: linear-gradient(240deg,#D08702 50%, black 50%);
+        border-radius: 1rem;
+        animation: hai 2s infinite linear;
+      
+
+        @keyframes hai {
+
+            0%{
+                background: linear-gradient(0deg,#D08702 50%, black 50%);
+         
+            }
+
+            20%{
+
+                background: linear-gradient(90deg,#D08702 50%, black 50%);
+      
+
+            }
+
+            
+            50%{
+
+                background: linear-gradient(180deg,#D08702 50%, black 50%);
+
+            }
+
+                  
+            80%{
+
+                background: linear-gradient(270deg,#D08702 50%, black 50%);
+
+            }
+    
+            100%{
+                background: linear-gradient(360deg,#D08702 50%, black 50%);
+            }
+    
+            
+        }
+    
+
+        img{
+            padding: 0.2rem;
+            border: 0.1rem solid white;
+            border-radius: 1rem;
+
+        }
+    }
+
+
+    .about-text{
+        padding: 0 2rem;
+  
+
+        h3{
+    
+            font-size: 3rem;
+        }
+
+        p{
+            font-size: 1.1rem;
+           
+            
+        }
+
+        .shortdesc{
+            padding-top: 1.2rem;
+
+              .contain{
+
+
+                  .first{
+                      min-width: 4rem;
+                      width: 7rem;
+                       color: #eeeeee;
+                      font-weight: 400;
+        
+                     display: inline-block;
+                       background: linear-gradient(90deg, #3f4144 20%, #1e1e1e);
+                       padding: 1px 10px;
+                     border-radius: 4px;
+        
+
+                    }
+
+                        .second{
+                             font-weight: lighter;
+
+                             }
+                  }
+        }
+
+
+        .socialicons{
+            padding-top: 1.2rem;
+
+            a{
+                display: inline-block;
+                text-decoration: none;
+                
+                background: linear-gradient(90deg, #3f4144 20%, #1e1e1e);
+                border-radius:50%;
+                transition: 0.5s ease;
+
+                &:hover{
+                    background: $pricol;
+                }
+
+                i{
+                  font-size: 1.2rem;
+                  padding: 1rem;
+
+                }
+            }
+        }
+
+        .button-container{
+            margin: 1rem 0;
+            padding: 1rem 0;
+
+            a{
+                display: inline-block;
+                padding: 0.6rem 1.2rem;
+                text-decoration: none;
+                color: white;
+                background: $pricol;
+                text-transform: uppercase;
+                border-radius: 0.2rem;
+                transition: all 0.4s;
+                position: relative;
+                z-index: 1;
+                margin-top: 1rem;
+                
+
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: white;
+                    width: 100%;
+                    height: 0%;
+                    transition: 0.4s;
+                    z-index: -1;
+                }
+
+                &:hover::before{
+                    height: 100%;
+
+                }
+                &:hover{
+                    color: $pricol;
+                }
+
+                &:hover i{
+                    color: $pricol;
+                }
+
+                i{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/*---Skills Section---*/
+#skills{
+    
+    padding: 4rem 0;
+
+    .skills-heading{
+        p{
+            text-transform: capitalize;
+        }
+
+        h2{
+
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            position: relative;
+            display: inline-block;
+
+            &::before{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                top: 100%;
+                left: 0;
+                background: $pricol;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                margin-top: 1.2rem; 
+                animation: move 3s infinite linear;
+                animation-direction: alternate-reverse;
+            }
+
+            @keyframes move {
+                0%{
+                    left: 0;
+                }
+
+                100%{
+                    left: 100%;
+                }
+                
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                margin-top: 1.4rem; 
+                left: 0;
+                top: 100%;
+                background: $pricol;
+                display: inline-block;
+   
+            }
+
+
+
+            span{
+                background: $pricol;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    }
+
+    .skill{
+ 
+
+        .skills{
+ 
+            padding: 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 6px 16px rgba(0,0,0,.3);
+            transition: 0.4s linear;
+
+            &:hover{
+               box-shadow: 0 6px 16px #D08702;
+                cursor: pointer;
+            }
+
+  
+            .progress{
+                border-radius: 2rem;
+
+                .progress-bar{
+                    background: $pricol;
+                }
+            }
+        }
+    }
+
+}
+
+/*---Services Section--*/
+#services{
+   
+    padding: 5rem 0;
+
+    .services-heading{
+        p{
+            text-transform: capitalize;
+        }
+
+        h2{
+
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            position: relative;
+            display: inline-block;
+
+            &::before{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                top: 100%;
+                left: 0;
+                background: $pricol;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                margin-top: 1.2rem; 
+                animation: move 3s infinite linear;
+                animation-direction: alternate-reverse;
+            }
+
+            @keyframes move {
+                0%{
+                    left: 0;
+                }
+
+                100%{
+                    left: 100%;
+                }
+                
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                margin-top: 1.4rem; 
+                left: 0;
+                top: 100%;
+                background: $pricol;
+                display: inline-block;
+   
+            }
+
+
+
+            span{
+                background: $pricol;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    }
+
+    .service-container{
+        text-align: center;
+
+        padding: 1rem 0.4rem;
+        border: 2px solid rgba(255, 255, 255, 0.08);
+        transition: 0.4s linear;
+        border-radius: 2rem;
+        position: relative;
+        z-index: 1;
+
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 0%;
+            height: 0%;
+            border-radius: 2rem;
+            background: $pricol;
+            transition: 0.4s linear;
+            z-index: -1;
+        }
+
+        &:hover::before{
+            height: 100%;
+            width: 100%;
+        }
+
+
+        &:hover{
+     
+            cursor: pointer;
+       
+        }
+
+        &:hover .logo{
+            background: white;
+        }
+
+        &:hover i{
+            color: $pricol;
+        }
+
+        &:hover p{
+            color: white;
+        }
+
+        .logo{
+            margin: 2rem 0;
+            background: $pricol;
+            display: inline-block;
+            border-radius: 50%;
+            transition: 0.4s linear;
+
+            i{
+                font-size: 2rem;
+                padding: 1.5rem;
+                transition: 0.4s linear;
+
+            }
+        }
+
+        h5{
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.12rem;
+
+        }
+
+        p{
+            color: grey;
+            margin: 1.4rem 0;
+
+        }
+    }
+
+
+}
+
+
+/*---Portfolio Section---*/
+#mywork{
+
+    padding: 5rem 0;
+   
+
+    ul{
+        padding-left: 0;
+        background:  rgba(255, 255, 255, 0.08) ;
+
+        li{
+            list-style: none;
+            padding: 0.6rem 1.2rem;
+
+            
+            &.active{
+                background: $pricol;
+            }
+
+           
+
+            &:hover{
+                background: $pricol;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+
+
+    .mywork-heading{
+        p{
+            text-transform: capitalize;
+        }
+
+        h2{
+
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            position: relative;
+            display: inline-block;
+
+            &::before{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                top: 100%;
+                left: 0;
+                background: $pricol;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                margin-top: 1.2rem; 
+                animation: move 3s infinite linear;
+                animation-direction: alternate-reverse;
+            }
+
+            @keyframes move {
+                0%{
+                    left: 0;
+                }
+
+                100%{
+                    left: 100%;
+                }
+                
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                margin-top: 1.4rem; 
+                left: 0;
+                top: 100%;
+                background: $pricol;
+                display: inline-block;
+   
+            }
+
+
+
+            span{
+                background: $pricol;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    }
+
+    .main{
+
+
+        .image{
+            overflow: hidden;
+            position: relative;
+            border-radius: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            padding: 0.1rem;
+
+            &:hover{
+                box-shadow: 0 6px 16px rgba(25,25,25,0.9);
+                border: 2px solid rgba(255, 255, 255, 0.38);
+
+            }
+
+            &:hover .workdetails{
+                animation: haha 0.5s forwards linear;
+                cursor: pointer;
+            }
+
+            @keyframes haha {
+
+                0%{
+     
+                    opacity: 0;
+                }
+
+                90%{
+                    top: 80%;
+                    visibility: visible;
+                }
+
+                100%{
+
+                    top: 70%;
+                    visibility: visible;
+                }
+                
+            }
+
+
+            .workdetails{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60%;
+                padding: 0.6rem;
+                text-align: center;
+                transition: 0.4s;
+                background: $pricol;
+                visibility: hidden;
+                border:2px solid rgba(255, 255, 255, 0.08) ;
+     
+              
+    
+    
+            }
+
+            &:hover img{
+                transform: scale(1.2);
+                filter: blur(0.1rem);
+                cursor: pointer;
+
+            }
+
+      
+
+            img{
+                transition: 0.4s;
+
+            }
+
+        }
+    
+    }
+ 
+
+}
+
+/*---Testimonial Section---*/
+
+#testimonial{
+
+    padding: 5rem 0;
+   
+
+
+    
+    .testimonial-heading{
+        p{
+            text-transform: capitalize;
+        }
+
+        h2{
+
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            position: relative;
+            display: inline-block;
+
+            &::before{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                top: 100%;
+                left: 0;
+                background: $pricol;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                margin-top: 1.2rem; 
+                animation: move 3s infinite linear;
+                animation-direction: alternate-reverse;
+            }
+
+            @keyframes move {
+                0%{
+                    left: 0;
+                }
+
+                100%{
+                    left: 100%;
+                }
+                
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                margin-top: 1.4rem; 
+                left: 0;
+                top: 100%;
+                background: $pricol;
+                display: inline-block;
+   
+            }
+
+
+
+            span{
+                background: $pricol;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    }
+
+    .carousel-indicators{
+        position: absolute;
+        top: 100%;
+
+        li{
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+            background-color: $pricol;
+         
+        }
+    }
+
+    .carousel-item{
+
+        .client{
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            padding: 1.5rem 0;
+
+            &:hover{
+
+                box-shadow: 0 6px 16px $pricol;
+                cursor: pointer;
+
+            }
+
+            h5{
+                color: #eeeeee;
+                margin: 1rem 0;
+            }
+            p{
+                margin: 2rem 0;
+            }
+
+            span{
+
+                i{
+                    color: $pricol;
+                }
+            }
+        }
+     
+    }
+
+    figure{
+        border-radius: 50%;
+        background: $pricol;
+        display: inline-block;
+        overflow: hidden;
+ 
+
+
+
+        img{
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            padding: 0.4rem;
+        }
+    
+        
+    }
+
+}
+
+/*---Contact Section---*/
+#contact{
+
+    padding: 7rem 0 5rem 0;
+   
+
+
+    .contact-heading{
+        p{
+            text-transform: capitalize;
+        }
+
+        h2{
+
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            position: relative;
+            display: inline-block;
+
+            &::before{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                top: 100%;
+                left: 0;
+                background: $pricol;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                margin-top: 1.2rem; 
+                animation: move 3s infinite linear;
+                animation-direction: alternate-reverse;
+            }
+
+            @keyframes move {
+                0%{
+                    left: 0;
+                }
+
+                100%{
+                    left: 100%;
+                }
+                
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                margin-top: 1.4rem; 
+                left: 0;
+                top: 100%;
+                background: $pricol;
+                display: inline-block;
+   
+            }
+
+
+
+            span{
+                background: $pricol;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    }
+
+    .address{
+
+        h3{
+            margin-bottom: 1rem;
+
+            &::after{
+                content: "";
+                width: 12%;
+                height: 0.2rem;
+                background: $pricol;
+                display: block;
+                
+            }
+        }
+
+        p{
+            margin: 1.8rem 0;
+        }
+
+        span{
+            color: $pricol;
+        }
+
+
+        .commondiv{
+        border: 2px solid rgba(255, 255, 255, 0.08);
+        padding: 0.6rem;
+        margin: 1rem 0;
+
+        &:hover{
+            box-shadow: 0 4px 12px $pricol;
+            cursor: pointer;  
+        }
+
+        p{
+            margin: 0;
+        }
+
+
+            .icon{
+
+       
+                text-align: center;
+                background: $pricol;
+                padding: 1rem;
+                border-radius: 0.5rem;
+
+                i{
+                    padding: 0.6rem;
+                   
+                }
+                
+
+
+
+
+            }
+
+            .text{
+
+  
+                padding-left: 0.8rem;
+                padding-top: 0.8rem;
+            
+
+
+            }
+        }
+    }
+
+    .contactform{
+        padding-left: 1rem;
+
+        h3{
+            margin-bottom: 1rem;
+
+            &::after{
+                content: "";
+                width: 12%;
+                height: 0.2rem;
+                background: $pricol;
+                display: block;
+                
+            }
+        }
+        p{
+            margin: 1.8rem 0;
+        }
+
+        form{
+
+            a{
+                display: inline-block;
+                padding: 0.6rem 1.2rem;
+                text-decoration: none;
+                color: white;
+                background: $pricol;
+                text-transform: uppercase;
+                border-radius: 0.2rem;
+                transition: all 0.4s;
+                position: relative;
+                z-index: 1;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: white;
+                    width: 100%;
+                    height: 0%;
+                    transition: 0.4s;
+                    z-index: -1;
+                }
+
+                &:hover::before{
+                    height: 100%;
+
+                }
+                &:hover{
+                    color: $pricol;
+                }
+
+                &:hover i{
+                    color: $pricol;
+                }
+
+                i{
+                    color: white;
+                }
+            }
+
+            textarea{
+
+                width: 100%;
+                min-height: 2.5rem;
+                max-height: 10rem;
+                background: none;
+                padding: 0.6rem 1.2rem;
+                background: none;
+                outline: 0.1rem solid transparent;
+                border: 2px solid rgba(255, 255, 255, 0.08);
+
+                &:focus{
+                    border: 2px solid $pricol;
+                }
+            }
+
+            .nameemail{
+           margin: 2rem 0;
+           margin-top: 0;
+
+
+                input{
+
+                    padding: 0.6rem 1.2rem;
+                    width: 45%;
+                    background: none;
+                    outline: 0.1rem solid transparent;
+                    border: 2px solid rgba(255, 255, 255, 0.08);
+
+                    &:focus{
+                        border: 2px solid $pricol;
+                    }
+                }
+            }
+
+            .subnumber{
+
+                margin: 2rem 0;
+
+
+                input{
+
+                    padding: 0.6rem 1.2rem;
+                    width: 45%;
+                    background: none;
+                    outline: 0.1rem solid transparent;
+                    border: 2px solid rgba(255, 255, 255, 0.08);
+
+                    &:focus{
+                        border: 2px solid $pricol;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .map{
+
+        border: 2px solid rgba(255, 255, 255, 0.08);
+        padding: 0.1rem;
+        background: $pricol;
+        border-radius: 2rem;
+        overflow: hidden;
+
+        &:hover{
+
+            box-shadow: 0 6px 16px $pricol;
+
+        }
+
+
+
+        iframe{
+         
+            border-radius: 2rem;
+            padding: 0.1rem;
+        }
+    }
+
+
+
+
+}
+
+
+/*---Footer Section---*/
+#footer{
+    padding-bottom: 1rem;
+
+    small{
+
+        i{
+            color: red;
+        }
+
+        span{
+            color: $pricol;
+        }
+    }
+}
+
+
+/*--Scroll to Top--*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: $pricol;
+    color: white;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    transition: 0.3s;
+   
+
+    i{
+        padding: 0.4rem;
+        transition: 0.3s;
+       
+    }
+  }
+  
+  #myBtn:hover {
+    background-color: white;
+
+    &:hover i{
+        color: $pricol;
+    }
+  }
+
+
+
+  /*Responsive Design*/
+
+  @media screen and (max-width:556px){
+
+
+html{
+    font-size: 62.5%;
+    word-wrap: break-word;
+}
+
+#contact{
+
+    .contactform{
+        padding-left: 0;
+  
+
+
+
+        form{
+
+
+
+
+            .nameemail{
+                flex-direction: column;
+               
+                margin: 0;
+     
+         
+
+
+                input{
+
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                }
+            }
+
+            .subnumber{
+                flex-direction: column;
+                margin: 0;
+
+
+                input{
+
+  
+                    width: 100%;
+                    margin-bottom: 1rem;
+      
+
+                }
+
+
+            }
+        }
+    }
+}
+
+  }
